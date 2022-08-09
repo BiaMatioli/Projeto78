@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Projeto 78</title>
+    </head>
+    <body>
+        <center>
+            <h1>Álbum de família</h1>
+            
+            <br>
+
+            <img src="" id="imgFamilia">
+            <h4 id="NomesPessoas"></h4>
+
+            <br>
+
+            <button onclick="update();">Próximo</button>
+        </center>
+
+        <script>
+            var img = ["imgAlbum.jpg", "imgPai.jpg", "imgMae.png", "imgAvos1.jpg", "imgAvos2.jpg"];
+            var nomes = ["Álbum de Família", "Gustavo (Pai)", "Camila (Mãe)", "Cilenio e Lúcia (avós paternos)", "Ciro e Cida (avós maternos)"];
+            var i = 0;
+
+            function update()
+            {
+                i++;
+                var QntPessoas = 5;
+
+                if (i > QntPessoas)
+                {
+                    i = 0;
+                }
+                
+                var UpdateImg = img[i];
+                var UpdateNome = nomes[i];
+
+                document.getElementById("imgFamilia").src = UpdateImg;
+                document.getElementById("NomesPessoas").innerHTML = UpdateNome;
+            }
+        </script>
+    </body>
+</html>
